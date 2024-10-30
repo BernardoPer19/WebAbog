@@ -1,0 +1,75 @@
+<header>
+    <div class="header-video">
+      <video autoplay loop muted>
+        <source src="public/1826896-hd_1920_1080_24fps.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="header-content" data-aos="fade-right" data-aos-duration="1000">
+      <h1>Estudio De Abogacía</h1>
+      <p>Especialistas en Ley Comercial, Litigación, Insolvencia, y Fraude
+        <h4>for: T.E.A.M</h4>
+      </p>
+      <button>¡Contáctanos!</button>
+    </div>
+  </header>
+  
+  <style>
+    header {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .header-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 0;
+    }
+  
+    .header-video video {
+      width: 100%;
+      height: 100vh;
+
+      object-fit: cover;
+    }
+  
+    .header-content {
+      width: 50%;
+      background-color: rgba(0, 0, 0, 0.511);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+  
+    .header-content h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+  
+    .header-content p {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+  
+    .header-content button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #134B70;
+      border: none;
+      cursor: pointer;
+      width: 300px;
+    }
+  </style>
+  

@@ -1,0 +1,64 @@
+---
+const { title, description, experienceYears, id } = Astro.props;
+import services from '../data/InfoServices';
+---
+
+<div class="Card">
+    <h3 class="title">{title}</h3>
+    <p class="description">{description}</p>
+    <p class="experience">{experienceYears} años de experiencia</p>
+    <button class="btn-see-more">
+        <a href={`/OurServices/${id}`}>Ver más</a>
+    </button>
+</div>
+
+<style>
+.Card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.Card:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 12px 0;
+    color: #555;
+}
+
+.experience {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 8px 0;
+}
+
+.btn-see-more {
+    padding: 10px 16px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #134B70;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-see-more  a{
+    color: #fff;
+}
+.btn-see-more:hover {
+    background-color: #195b87;
+}
+</style>

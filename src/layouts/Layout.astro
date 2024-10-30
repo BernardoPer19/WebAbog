@@ -1,9 +1,19 @@
 ---
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
+import 'aos/dist/aos.css'; // [!code ++]
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 ---
 
 <!doctype html>
@@ -17,34 +27,40 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+			<Nav/>
+		<main>
+			<slot />
+		</main>
+			<Footer/>
+
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+		<script> // [!code ++]
+			import AOS from "aos"; // [!code ++]
+			AOS.init(); // [!code ++]
+		  </script> 
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+
+	body {
+		font-family: 'Roboto', sans-serif;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	main {
+		flex: 1;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 </style>

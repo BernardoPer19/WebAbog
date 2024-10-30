@@ -1,0 +1,88 @@
+---
+// BackgroundForm.astro
+import Form from "./Form.astro";
+---
+
+<div class="background-form">
+  <div class="overlay"></div>
+  <div class="left-overlay"></div>
+  <div class="form-container">
+    <div class="container-contact">
+      <div class="left"><h1>The MeCha Labog <br /> Y Asociaciones</h1></div>
+      <div class="right">
+        <h2>Nuestra Direccion:</h2>
+        <br />
+        <p>
+          Av. Los Rosales 122. 28021, Madrid. <br />
+          Email: info@misitio.com Tel: <br />
+          914-123-456
+          <br />
+        </p><br /><br /><br />
+        <label
+          >Para preguntas generales, por favor completa el siguiente formulario:
+          <Form />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .background-form {
+    position: relative;
+    width: 100%;
+    height: 750px; /* Ajusta la altura según sea necesario */
+    background-image: url("https://images.pexels.com/photos/443399/pexels-photo-443399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+  .container-contact {
+    display: flex;
+    width: 100%;
+  }
+
+  .left {
+    margin-right: 120px;
+  }
+  .right {
+    color: #fff;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 106, 0.5); /* Color azul con transparencia */
+  }
+
+  .left-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 54%; /* Cubre el 50% izquierdo de la página */
+    height: 100%;
+    background-color: rgba(0, 19, 95, 0.414); /* Color azul más oscuro */
+  }
+
+  .form-container {
+    position: relative;
+    z-index: 1; /* Asegura que el formulario esté encima de las capas */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Ancho máximo del formulario */
+  }
+  h1{
+    color: #fff;
+  }
+  p,label,h3{
+    font-size: 20px;
+  }
+</style>

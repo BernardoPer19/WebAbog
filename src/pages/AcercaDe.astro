@@ -1,0 +1,104 @@
+---
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Acerca De Nosotros" >
+  <main>
+    <div class="contanier-acerca as1">
+      <div >
+        <img class="img"
+          src="https://images.pexels.com/photos/4427816/pexels-photo-4427816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="acerca-de1">
+        <h2 data-aos="fade-left" data-aos-duration="1000">Acerca De Nosotros</h2>
+
+        <p class="content-1" data-aos="fade-left" data-aos-duration="1000">
+            En <strong>TheMerChaLabog</strong>, creemos en un enfoque único y personalizado para
+            cada caso. Con una mezcla de experiencia, ética y una dedicación
+            incansable, nuestro equipo de abogados está aquí para guiarte a través
+            de cualquier desafío legal que enfrentes. Somos más que una firma de
+            abogados; somos tus aliados en la búsqueda de justicia. Nuestra firma
+            nació con un propósito claro: hacer que el derecho esté al alcance de
+            todos. Desde el primer contacto.
+
+        </p>
+        <button>¡¡Contactar Ahora!!</button>
+
+    </div>
+    </div>
+    <div class="contanier-acerca as2">
+        <div class="acerca-de2">
+                <h2 data-aos="fade-right" data-aos-duration="1000">Por que nosotros?</h2>
+                <ul data-aos="fade-right" data-aos-duration="1000">
+                    <li><strong>Enfoque Personalizado:</strong> Nos tomamos el tiempo de conocer a fondo cada situación. No creemos en soluciones genéricas; creemos en trabajar mano a mano contigo para lograr los mejores resultados posibles.</li>
+                    <li><strong>Especialistas en Diversas Áreas del Derecho:</strong> Desde derecho corporativo hasta litigios familiares, nuestros abogados tienen la experiencia y habilidades necesarias para afrontar los casos más complejos.</li>
+                    <li><strong>Comunicación Transparente y Constante:</strong> Sabemos que el proceso legal puede ser abrumador. Nuestro compromiso es mantenerte al tanto en cada etapa, brindando claridad y tranquilidad.</li>
+                    <li><strong>Pasión por la Justicia:</strong> Tu éxito es nuestra misión. La justicia no es solo un trabajo para nosotros; es nuestro compromiso y propósito.</li>
+                </ul>
+        
+        </div>
+        <div>
+            <img class="img" src="https://images.pexels.com/photos/4427627/pexels-photo-4427627.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        </div>
+    </div>
+</main>
+
+</Layout>
+
+<style>
+  .contanier-acerca{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  .img {
+    width: 600px;
+    height: 600px;
+    background-attachment: fixed;
+  }
+  .as1{
+    padding-top: 150px;
+  }
+
+  .as2{
+    padding-bottom: 100px;
+  }
+
+  .acerca-de1,.acerca-de2{
+    background-color: #201E43;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 600px;
+    font-size: 20px;
+    height: 600px;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+
+  button{
+        padding: 13px 21px;
+        background-color: #134B70;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        width: 200px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>

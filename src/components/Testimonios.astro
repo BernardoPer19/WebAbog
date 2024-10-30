@@ -1,0 +1,103 @@
+---
+import Testimonio from "./CardTestimonio.astro";
+---
+
+<main>
+  <h1  data-aos="fade-right" data-aos-duration="1000">Nuestros Testimonios!!</h1>
+  <swiper-container
+    class="mySwiper"
+    pagination="true"
+    keyboard="true"
+    mousewheel="true"
+    loop="true"
+    autoplay-delay="2000"
+     data-aos="fade-left" data-aos-duration="1000"
+  >
+    <swiper-slide>
+      <Testimonio
+        name={"Ing. Saul"}
+        testimonio={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quisquam, dolore velit adipisci, impedit voluptatibus asperiores aliquam dolorem quaerat nisi ipsam. Temporibus rem voluptas eaque. Inventore vero aliquid delectus quod"}
+        img={"https://www.elestudiodeblanca.com/wp-content/uploads/2018/02/EEDB0741-sRGB-1000px.jpg"}
+        country={"Chile"}
+        post={"09/03/2023"}
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <Testimonio
+        name={"Lic. Fernandez"}
+        testimonio={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quisquam, dolore velit adipisci, impedit voluptatibus asperiores aliquam dolorem quaerat nisi ipsam. Temporibus rem voluptas eaque. Inventore vero aliquid delectus quod"}
+        img={"https://www.valls-abogados.es/img/javier-valls.1596197336.jpg"}
+        country={"Costa Rica"}
+        post={"09/03/2023"}
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <Testimonio
+        name={"Mr. Ramces"}
+        testimonio={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quisquam, dolore velit adipisci, impedit voluptatibus asperiores aliquam dolorem quaerat nisi ipsam. Temporibus rem voluptas eaque. Inventore vero aliquid delectus quod"}
+        img={"https://torregrozaydiazgranados.com/wp-content/uploads/2021/03/santiago.jpg"}
+        country={"Costa Rica"}
+        post={"09/03/2023"}
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <Testimonio
+        name={"Lic Daniel"}
+        testimonio={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quisquam, dolore velit adipisci, impedit voluptatibus asperiores aliquam dolorem quaerat nisi ipsam. Temporibus rem voluptas eaque. Inventore vero aliquid delectus quod"}
+        img={"https://idealex.press//wp-content/uploads/2016/02/felipe-lavin-venegas1-3-196x300.jpg"}
+        country={"Costa Rica"}
+        post={"09/03/2023"}
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <Testimonio
+        name={"Dr. Nickolaus"}
+        testimonio={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quisquam, dolore velit adipisci, impedit voluptatibus asperiores aliquam dolorem quaerat nisi ipsam. Temporibus rem voluptas eaque. Inventore vero aliquid delectus quod"}
+        img={"https://thumbs.dreamstime.com/b/joven-y-atractivo-abogado-de-negocios-con-un-traje-imagen-perfil-llamadas-videoconferencia-retrato-hombre-hermoso-empresario-250005097.jpg"}
+        country={"Costa Rica"}
+        post={"09/03/2023"}
+      />
+    </swiper-slide>
+  </swiper-container>
+  .
+</main>
+
+<style>
+  h1{text-align: center; padding-bottom: 70px; color: #eeeeee;}
+  main {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    height: 80vh;
+    background-color: #134B70;
+    border-radius: 20px;
+  }
+
+  swiper-container {
+    margin: 0 auto;
+    height: 50vh;
+    font-size: 25px;
+    width: 900px;
+    box-shadow:
+      rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  swiper-slide {
+    width: 300px;
+    height: 50vh;
+    border-radius: 20px;
+  }
+  @media (max-width: 768px) {
+  
+    swiper-container{
+      height: 60vh;
+      width: 500px;
+  }
+
+  
+}
+</style>

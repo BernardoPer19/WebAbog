@@ -1,0 +1,86 @@
+---
+// Aquí desestructuramos las props como se hace en Astro
+const { testimonio, name, img, country, post } = Astro.props;
+---
+
+<div class="testimonio">
+  <div class="user">
+    <img class="img" src={img} alt={name} />
+    <div class="userData">
+      <h2>{name}</h2>
+      <h3>{country}</h3>
+      <p>{post}</p>
+    </div>
+  </div>
+  <span class="span1">❝</span>
+
+  <p class="txt-test">
+    {testimonio}
+  </p>
+  <span class="span2">❞</span>
+</div>
+
+<style>
+  p{
+        color: #fff;
+    }
+    h1,h2,h3{
+        color: #eeeeee;
+    }
+  .img {
+    width: 170px;
+    height: 150px;
+    border-radius: 50%;
+  }
+ 
+ 
+  .user {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 150px;
+  }
+
+  .testimonio {
+    display: flex;
+    height: 100%;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .txt-test {
+    padding: 50px;
+    display: flex;
+    width: 600px;
+    color: #dfdfdf;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+    margin-left: 40px;
+  }
+
+  .span1 {
+    font-size: 70px;
+    color: rgba(178, 178, 178, 0.468);
+    position: absolute;
+    right: 600px;
+  }
+
+  .span2 {
+    font-size: 70px;
+    color: rgba(178, 178, 178, 0.468);
+    position: absolute;
+    left: 750px;
+    bottom: 120px;
+  }
+  @media (max-width: 768px) {
+  
+  .testimonio{
+    width: 500px;
+  }
+
+  
+}
+</style>

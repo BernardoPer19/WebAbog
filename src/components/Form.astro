@@ -1,0 +1,109 @@
+---
+// ContactForm.astro
+---
+
+
+<div class="contact-form">
+    <form >
+      <div class="form-container">
+        <div class="form-column">
+          <div class="form-group">
+            <input type="text" id="name" required placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" required placeholder="Tu celular" />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" required placeholder="Tu correo electrónico" />
+          </div>
+        </div>
+        <div class="text-area-container">
+          <div class="form-group">
+            <textarea  style="width: 100%; height: 156px;" id="message" required placeholder="Tu mensaje"></textarea>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">Enviar</button>
+      <div class="form-footer">Nos pondremos en contacto contigo pronto.</div>
+    </form>
+  </div>
+  
+
+<style>
+  
+  
+
+    .contact-form {
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .form-group {
+      flex: 1;
+      margin-bottom: 15px;
+      min-width: 300px; /* Asegura que los campos no sean demasiado pequeños */
+    }
+  
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  
+    .btn-submit {
+  background-color: #134B70;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+  
+    .btn-submit:hover {
+        background-color: #175c8a;
+    }
+  
+    .form-footer {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ffffff;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .form-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px; /* Espacio entre columnas */
+    }
+  
+    .text-area-container {
+      flex: 2; /* Toma el doble de espacio que los campos */
+    }
+  
+    .form-column {
+      flex: 1; /* Cada columna ocupa el mismo espacio */
+    }
+  </style>

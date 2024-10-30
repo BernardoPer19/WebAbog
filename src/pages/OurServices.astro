@@ -1,0 +1,102 @@
+---
+import CardServices from "../components/CardServices.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Servicios">
+    <main>
+       <div class="container-cards">
+        <div class="services-txt">
+            <h2>Sobre Nuestros Servicios</h2>
+            <p>
+                En TheMerChaLabog, ofrecemos una amplia gama de servicios legales diseñados para satisfacer las diversas necesidades de nuestros clientes. Nuestro equipo de profesionales está altamente capacitado y cuenta con años de experiencia en sus respectivas áreas, garantizando así un asesoramiento y representación de la más alta calidad.
+            </p>
+        </div>
+        <div class="pt1">
+            <CardServices 
+              title="Litigación" 
+              description="Ofrecemos representación legal experta en juicios y procedimientos, asegurando que tus derechos sean protegidos a lo largo de todo el proceso legal. Nuestro equipo está preparado para enfrentar cualquier desafío que se presente." 
+              experienceYears="10" 
+              id=1
+            />
+            
+            <CardServices 
+              title="Insolvencia" 
+              description="Brindamos asesoría integral en situaciones de insolvencia y reestructuración, ayudando a las empresas y a los individuos a encontrar soluciones viables para restaurar su estabilidad financiera. Contamos con un equipo especializado en este campo." 
+              experienceYears="8" 
+              id="2"
+            />
+            
+            <CardServices 
+              title="Resolución de Disputas" 
+              description="Nuestra experiencia en la resolución de disputas incluye negociación y arbitraje, proporcionando a nuestros clientes métodos eficientes para resolver conflictos sin recurrir a procesos judiciales prolongados. Buscamos siempre el mejor resultado para ti." 
+              experienceYears="12" 
+              id="3"
+            />
+          </div>
+          
+          <div class="pt2">
+            <CardServices 
+              title="Negocios" 
+              description="Ofrecemos consultoría legal especializada en derecho de negocios, ayudando a las empresas a navegar los complejos aspectos legales de sus operaciones. Nuestro objetivo es facilitar tu éxito a largo plazo en un entorno competitivo." 
+              experienceYears="5" 
+              id="4"
+            />
+            
+            <CardServices 
+              title="Fraude" 
+              description="Nos especializamos en detectar y abordar casos de fraude, proporcionando a nuestros clientes la protección legal necesaria para hacer frente a situaciones complicadas. Estamos aquí para garantizar tus derechos y obtener justicia." 
+              experienceYears="7" 
+              id="5"
+            />
+            
+            <CardServices 
+              title="Impuestos" 
+              description="Nuestra asesoría fiscal te ayudará a cumplir con todas las obligaciones tributarias, optimizando tu situación financiera y evitando sanciones. Estamos comprometidos a brindarte la mejor orientación en materia de impuestos." 
+              experienceYears="9" 
+              id="6"
+            />
+          </div>
+          
+          
+       </div>
+    </main>
+</Layout>
+
+<style>
+    main{
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+    .services-txt{
+        background-color: #201E43;
+        width: 100%;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        padding-top: 100px;
+        height: 360px;
+    }
+    .container-cards{
+        display: flex;
+        align-items: center;
+
+        gap: 30px;
+        justify-content: center ;
+        height: 100%;
+        flex-wrap: wrap;
+        margin:  0 auto;
+        max-width: 1200px;
+    }
+
+    .pt1,.pt2{
+
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+
+    }
+
+</style>
